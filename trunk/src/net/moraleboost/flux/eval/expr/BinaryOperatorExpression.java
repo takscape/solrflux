@@ -56,12 +56,12 @@ public abstract class BinaryOperatorExpression extends BaseExpression
         
         if (isBigDecimal(lho) || isBigDecimal(rho)) {
             return op.doBigDecimal(convertToBigDecimal(lho), convertToBigDecimal(rho));
-        } else if (isBigInteger(lho) || isBigInteger(rho)) {
-            return op.doBigInteger(convertToBigInteger(lho), convertToBigInteger(rho));
         } else if (isDouble(lho) || isDouble(rho)) {
             return op.doDouble(convertToDouble(lho), convertToDouble(rho));
         } else if (isFloat(lho) || isFloat(rho)) {
             return op.doFloat(convertToFloat(lho), convertToFloat(rho));
+        } else if (isBigInteger(lho) || isBigInteger(rho)) {
+            return op.doBigInteger(convertToBigInteger(lho), convertToBigInteger(rho));
         } else if (isLong(lho) || isLong(rho)) {
             return op.doLong(convertToLong(lho), convertToLong(rho));
         } else if (isInteger(lho) || isInteger(rho)) {
