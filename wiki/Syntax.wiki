@@ -1,4 +1,5 @@
 #summary The syntax
+#labels Featured
 
 == USE ==
 Solrへのコネクションを定義する。
