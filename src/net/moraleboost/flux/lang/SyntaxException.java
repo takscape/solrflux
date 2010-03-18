@@ -1,9 +1,9 @@
 package net.moraleboost.flux.lang;
 
-import net.moraleboost.flux.SolrqlException;
+import net.moraleboost.flux.FluxException;
 
 @SuppressWarnings("serial")
-public class SyntaxException extends SolrqlException
+public class SyntaxException extends FluxException
 {
     public SyntaxException()
     {

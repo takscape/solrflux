@@ -1,24 +1,24 @@
 package net.moraleboost.flux;
 
 @SuppressWarnings("serial")
-public class SolrqlException extends Exception
+public class FluxException extends Exception
 {
-    public SolrqlException()
+    public FluxException()
     {
         super();
     }
     
-    public SolrqlException(String msg)
+    public FluxException(String msg)
     {
         super(msg);
     }
     
-    public SolrqlException(Throwable t)
+    public FluxException(Throwable t)
     {
         super(t);
     }
     
-    public SolrqlException(String msg, Throwable t)
+    public FluxException(String msg, Throwable t)
     {
         super(msg, t);
     }

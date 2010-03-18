@@ -1,9 +1,9 @@
 package net.moraleboost.flux.eval;
 
-import net.moraleboost.flux.SolrqlException;
+import net.moraleboost.flux.FluxException;
 
 @SuppressWarnings("serial")
-public class EvalException extends SolrqlException
+public class EvalException extends FluxException
 {
     public EvalException()
     {
