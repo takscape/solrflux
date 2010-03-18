@@ -52,11 +52,11 @@ tokens {
 }
 
 @parser::header {
-package net.moraleboost.solrql.lang;
+package net.moraleboost.flux.lang;
 }
 
 @lexer::header {
-package net.moraleboost.solrql.lang;
+package net.moraleboost.flux.lang;
 }
 
 @members {
