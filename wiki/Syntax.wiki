@@ -30,7 +30,7 @@ SELECT expr1, expr2, ... [FROM connection] [WHERE where_expression | NWHERE nati
   * number: 最大何件の検索結果アイテムを返すか
   * offset: ヒットした検索結果セットのうち、何件目からを返すか（0から始まる）
 
-exprに「*」を指定すると、全フィールドが返される。
+exprに「`*`」を指定すると、全フィールドが返される。
 
 FROM節は省略可。省略した場合は、デフォルトの接続が用いられる。
 
