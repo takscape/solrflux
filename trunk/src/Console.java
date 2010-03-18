@@ -14,16 +14,16 @@ import org.apache.commons.io.input.CharSequenceReader;
 import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocument;
 
-import net.moraleboost.solrql.eval.EvalContext;
-import net.moraleboost.solrql.eval.EvalException;
-import net.moraleboost.solrql.eval.Statement;
-import net.moraleboost.solrql.eval.stmt.SelectStatement;
-import net.moraleboost.solrql.eval.stmt.UseStatement;
-import net.moraleboost.solrql.lang.SolrqlLexer;
-import net.moraleboost.solrql.lang.SolrqlParser;
-import net.moraleboost.solrql.lang.StatementListBuilder;
-import net.moraleboost.solrql.lang.SyntaxException;
-import net.moraleboost.solrql.lang.SolrqlParser.stmt_list_return;
+import net.moraleboost.flux.eval.EvalContext;
+import net.moraleboost.flux.eval.EvalException;
+import net.moraleboost.flux.eval.Statement;
+import net.moraleboost.flux.eval.stmt.SelectStatement;
+import net.moraleboost.flux.eval.stmt.UseStatement;
+import net.moraleboost.flux.lang.SolrqlLexer;
+import net.moraleboost.flux.lang.SolrqlParser;
+import net.moraleboost.flux.lang.StatementListBuilder;
+import net.moraleboost.flux.lang.SyntaxException;
+import net.moraleboost.flux.lang.SolrqlParser.stmt_list_return;
 import jline.ConsoleReader;
 
 public class Console
