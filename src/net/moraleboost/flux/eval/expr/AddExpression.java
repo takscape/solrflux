@@ -15,7 +15,6 @@ public class AddExpression extends BinaryOperatorExpression
         super();
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     protected Object evaluateInner(Object lho, Object rho, EvalContext ctx)
     throws EvalException
@@ -29,12 +28,12 @@ public class AddExpression extends BinaryOperatorExpression
             return ((String)lho + (String)rho);
         } else if (isList(lho)) {
             // concatenate
-            List ret = new ArrayList((List)lho);
+            List<Object> ret = new ArrayList<Object>((List<?>)lho);
             addToList(ret, rho);
             return ret;
         } else if (isArray(lho)) {
             // concatenate
-            List ret = new ArrayList();
+            List<Object> ret = new ArrayList<Object>();
             for (int i=0; i<Array.getLength(lho); ++i) {
                 ret.add(Array.get(lho, i));
             }
@@ -46,12 +45,11 @@ public class AddExpression extends BinaryOperatorExpression
         throw new EvalException("Operands have incompatible types.");
     }
     
-    @SuppressWarnings("unchecked")
-    private void addToList(List list, Object obj)
+    private void addToList(List<Object> list, Object obj)
     {
         if (isList(obj)) {
             // append all elements
-            list.addAll((List)obj);
+            list.addAll((List<?>)obj);
         } else if (isArray(obj)) {
             // append all elements
             int len = Array.getLength(obj);

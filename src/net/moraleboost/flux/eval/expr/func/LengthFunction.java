@@ -14,7 +14,6 @@ public class LengthFunction extends BaseFunction
         super();
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public Integer call(List<Object> arguments, EvalContext ctx)
             throws EvalException
@@ -26,7 +25,7 @@ public class LengthFunction extends BaseFunction
             } else if (isArray(arg)) {
                 return Array.getLength(arg);
             } else if (isCollection(arg)) {
-                return ((Collection)arg).size();
+                return ((Collection<?>)arg).size();
             } else if (isString(arg)) {
                 return ((String)arg).length();
             } else {
