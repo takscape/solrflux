@@ -44,8 +44,10 @@ public class CompareExpression extends BinaryOperatorExpression
             return getResult(cmp);
         } else if (lho.getClass().equals(rho.getClass())) {
             // same class
-            int cmp = ((Comparable)lho).compareTo(rho);
-            return getResult(cmp);
+            if (lho instanceof Comparable) {
+                int cmp = ((Comparable<Object>)lho).compareTo(rho);
+                return getResult(cmp);
+            }
         }
         
         return false;

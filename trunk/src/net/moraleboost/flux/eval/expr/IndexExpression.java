@@ -37,7 +37,6 @@ public class IndexExpression extends BaseExpression
         return index;
     }
 
-    @SuppressWarnings("unchecked")
     public Object evaluate(EvalContext ctx) throws EvalException
     {
         Object op = operand.evaluate(ctx);
@@ -54,7 +53,7 @@ public class IndexExpression extends BaseExpression
         if (isArray(op)) {
             return Array.get(op, convertToInteger((Number)idx));
         } else if (isList(op)) {
-            return ((List)op).get(convertToInteger((Number)idx));
+            return ((List<?>)op).get(convertToInteger((Number)idx));
         } else if (isString(op)) {
             return Character.toString(((String)op).charAt(convertToInteger((Number)idx)));
         } else {

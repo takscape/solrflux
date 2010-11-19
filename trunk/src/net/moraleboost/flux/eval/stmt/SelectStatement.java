@@ -182,7 +182,7 @@ public class SelectStatement extends BaseStatement
                 for (ResultField rf: resultFields) {
                     Object o = rf.expression.evaluate(ctx);
                     if (o instanceof Map) {
-                        resdoc.putAll((Map)o);
+                        resdoc.putAll((Map<? extends String, ? extends Object>)o);
                     } else {
                         resdoc.put(rf.alias, o);
                     }
